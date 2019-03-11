@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Page Title</title>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -20,22 +20,24 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+
 
 </head>
 
 <body>
-        <nav class="navbar navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">
-                        <i class= "inverted far fa-clock"
-                        width="50" height="40" class="d-inline-block align-top" alt=""></i>
-                    Coding Bootcamp- Train Time Assignment
-                </a>
-            </nav>
-        
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <i class="inverted far fa-clock" width="50" height="40" class="d-inline-block align-top" alt=""></i>
+            Coding Bootcamp- Train Time Assignment
+        </a>
+    </nav>
+
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Train Time</h1>
             <p class="lead">Chugga Chugga Chugga Chugga Choo Choo...</p>
+                     
         </div>
     </div>
     <div class="card card-body">
@@ -50,41 +52,49 @@
                     <th scope="col">Minutes Away</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Trenton Express</td>
-                    <td>Trenton</td>
-                    <td>25</td>
-                    <td>05:35am</td>
-                    <td>10</td>
-                </tr>
-            </tbody>        
+            <tbody id="trainInfo">
+                
+            </tbody>
         </table>
-    </div>                
+    </div>
     <div class="card card-body">
         <h3><strong>Add Train</strong></h3>
-       <form>
-           <div class="form-group">
-               <label for="exampleInputTrainName1"><h6>Train Name</h6></label>
-               <input type="name" class="form-control" id="exampleInputTrainName1" aria-describedby="trainNameHelp" placeholder="Enter Train Name"> 
-               <label for="exampleInputTrainName1"><h6>Destination</h6></label>
-               <input type="name" class="form-control" id="exampleInputDestination1" aria-describedby="destinationHelp" placeholder="Enter Destination"> 
-               <label for="exampleInputTrainName1"><h6>First Train Time</h6></label>
-               <input type="name" class="form-control" id="exampleInputFirstTrainTime1" aria-describedby="firstTrainTimeHelp" placeholder="Enter First Train Time"> 
-               <label for="exampleInputTrainName1"><h6>Frequency</h6></label>
-               <input type="name" class="form-control" id="exampleInputFrequency1" aria-describedby="frequencyHelp" placeholder="Enter Frequency"> 
+        <form>
+            <div class="form-group">
+                <label for="exampleInputTrainName1">
+                    <h6>Train Name</h6>
+                </label>
+                <input type="text" class="form-control" id="trainName" aria-describedby="trainNameHelp"
+                    placeholder="Enter Train Name">
+                <label for="trainName">
+                    <h6>Destination</h6>
+                </label>
+                <input type="text" class="form-control" id="destination" aria-describedby="destinationHelp"
+                    placeholder="Enter Destination">
+                <label for="destination">
+                    <h6>First Train Time</h6>
+                </label>
+                <input type="time" class="form-control" id="firstTrainTime"
+                    aria-describedby="firstTrainTimeHelp" placeholder="Enter First Train Time">
+                <label for="firstTrainTime">
+                    <h6>Frequency</h6>
+                </label>
+                <input type="number" class="form-control" id="frequency" aria-describedby="frequencyHelp"
+                    placeholder="Enter Frequency">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>   
-        </form>    
-    </div>    
+            <button type="submit" class="btn btn-primary submitButton">Submit</button>
+        </form>
+    </div>
 
 
 
-<!--     footer  -->
-<footer class="container-fluid text-center bg-light">
+    <!--     footer  -->
+    <footer class="invert container-fluid text-center bg-light">
         <p>Copyright &copy</p>
     </footer>
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.4/moment.min.js"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
 
