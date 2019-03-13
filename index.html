@@ -35,15 +35,28 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">All Aboard!!!</h1>
-            <img src="https://media.giphy.com/media/Sow69ypx2NS5W/giphy.gif"
-                          float="right"  width="400" height="300" class="d-inline-block align-top" alt="Tain Time">         
-            <p class="lead">Be like a train; go in the rain, go in the sun, go in the storm, go in the dark tunnels! 
-                            Be like a train; concentrate on your road and go with no hesitation!</p>
-            
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <img class="img-responsive">
+                        <img src="https://media.giphy.com/media/Sow69ypx2NS5W/giphy.gif" width="400" height="300"
+                            class="d-inline-block align-top" alt="Train Time">
+                    </div>
+                    <div class="col-lg">
+                        <h1 class="display-4">All Aboard!!!</h1>
+                        <p class="lead" class="d-inline-block align-top">
+                            Be like a train; go in the rain, go in the sun,
+                            go in the storm, go in the dark tunnels!
+                            Be like a train; concentrate on your road
+                            and go with no hesitation!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="card card-body">
+    </div>
+    </div>
+    <div class="card card-body" class="col-md-">
         <h3><strong>Current Train Schedule</strong></h3>
         <table class="table">
             <thead class="thead dark">
@@ -56,7 +69,7 @@
                 </tr>
             </thead>
             <tbody id="trainInfo">
-                
+
             </tbody>
         </table>
     </div>
@@ -77,8 +90,8 @@
                 <label for="destination">
                     <h6>First Train Time</h6>
                 </label>
-                <input type="time" class="form-control" id="firstTrainTime"
-                    aria-describedby="firstTrainTimeHelp" placeholder="Enter First Train Time">
+                <input type="time" class="form-control" id="firstTrainTime" aria-describedby="firstTrainTimeHelp"
+                    placeholder="Enter First Train Time">
                 <label for="firstTrainTime">
                     <h6>Frequency</h6>
                 </label>
@@ -95,7 +108,7 @@
     <footer class="invert container-fluid text-center bg-light">
         <p>Copyright &copy</p>
     </footer>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.4/moment.min.js"></script>
     <script src="assets/javascript/app.js"></script>
